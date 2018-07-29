@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="URLSessionMPFD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmt-Wp-3k8">
+                                <rect key="frame" x="172" y="105" width="30" height="30"/>
+                                <state key="normal" title="GET"/>
+                                <connections>
+                                    <action selector="getRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hi1-IK-BQa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpm-cz-yl8">
+                                <rect key="frame" x="167" y="281" width="40" height="30"/>
+                                <state key="normal" title="POST"/>
+                                <connections>
+                                    <action selector="postRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vyu-5s-6ST"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgp-Ym-vGE">
+                                <rect key="frame" x="0.0" y="486" width="375" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="181" id="sPK-Rm-q5k"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyF-Lb-p8E">
+                                <rect key="frame" x="121" y="441" width="133" height="30"/>
+                                <state key="normal" title="UploadPostMethod"/>
+                                <connections>
+                                    <action selector="UploadImageData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cj8-hN-Ci3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-mN-MG3">
+                                <rect key="frame" x="110.5" y="397" width="155" height="30"/>
+                                <state key="normal" title="uploadingViaAlamofire"/>
+                                <connections>
+                                    <action selector="uploadingViaAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sVb-n8-Pqw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wpm-cz-yl8" firstAttribute="top" secondItem="dmt-Wp-3k8" secondAttribute="bottom" constant="146" id="0Y3-EA-s1r"/>
+                            <constraint firstItem="Wpm-cz-yl8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ECN-lf-V8s"/>
+                            <constraint firstItem="dmt-Wp-3k8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="Fsi-OB-enA"/>
+                            <constraint firstItem="bgp-Ym-vGE" firstAttribute="top" secondItem="iyF-Lb-p8E" secondAttribute="bottom" constant="15" id="Oj5-De-U4U"/>
+                            <constraint firstItem="iyF-Lb-p8E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PRf-8I-ZNP"/>
+                            <constraint firstItem="EKO-mN-MG3" firstAttribute="centerX" secondItem="iyF-Lb-p8E" secondAttribute="centerX" id="Q4W-ny-cz5"/>
+                            <constraint firstItem="dmt-Wp-3k8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SS4-l9-BER"/>
+                            <constraint firstItem="bgp-Ym-vGE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T0N-l6-eeq"/>
+                            <constraint firstItem="bgp-Ym-vGE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WEo-ru-0cy"/>
+                            <constraint firstItem="iyF-Lb-p8E" firstAttribute="top" secondItem="EKO-mN-MG3" secondAttribute="bottom" constant="14" id="kDV-qd-Ddr"/>
+                            <constraint firstItem="bgp-Ym-vGE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ste-a5-to5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageData" destination="bgp-Ym-vGE" id="ige-6z-x1p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="112.89355322338831"/>
+        </scene>
+    </scenes>
+</document>
